@@ -3,24 +3,31 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
-        <title>EXAMPLE</title>
+        <title>Find an Replace</title>
     </head>
 
         <body>
           <div class='container'>
             <div class='jumbotron'>
-              <h1>EXAMPLE</h1>
-              <p><em>You can't ping without your pong</em></p>
+              <h1>Find and Replace Any Word</h1>
             </div>  <!-- /JUMBOTRON -->
 
         <!-- Row: 1 -->
             <div class='row'>
               <div class='col-sm-6'>
-                  <h2>Enter a number, brah!</h2>
-                  <form action='/userInput'>
+                  <h2>Enter a Prase</h2>
+                  <form class='form-group' action='/userInput' method='post'>
                       <div class='form-group'>
-                        <label for='number'>Number</label>
-                        <input id='number' name='number' type='number'>
+                        <label for='phrase'>Phrase</label>
+                        <input id='phrase' name='phrase' type='text'>
+                      </div>
+                      <div>
+                        <label for='find'>Find Word</label>
+                        <input id='find' name='find' type='text'>
+                      </div>
+                      <div>
+                        <label for='replace'>Replace Word</label>
+                        <input id='replace' name='replace' type='text'>
                       </div>
                       <button class='btn btn-warning' type='submit'>Submit!</button>
                 </form>

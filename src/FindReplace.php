@@ -1,27 +1,24 @@
 <?php
     class FindReplace
     {
-    //     function find_and_replace($input_string, $inputFind, $inputReplace){
+    //     function find_and_replace($input_string, $inputFind, $inputReplace) {
     //         $array_of_words = explode(" ", $input_string);
-    //         $key = array_search($inputFind, $array_of_words);
-    //         $replacement = array($key => $inputReplace);
-    //         $array_of_words = array_replace($array_of_words, $replacement);
-    //         return $array_of_words = implode(" ", $array_of_words);
-    //
-    //     }
+    //         $output = array();
+    //         foreach ($array_of_words as $word) {
+    //           if ($word == $inputFind) {
+    //             array_push($output, $inputReplace);
+    //           }
+    //           else {
+    //             array_push($output, $word);
+    //           }
+    //         }
+    //         return $output = implode(" ", $output);
+    // }
 
         function find_and_replace($input_string, $inputFind, $inputReplace) {
-            $array_of_words = explode(" ", $input_string);
-            $output = array();
-            foreach ($array_of_words as $word) {
-              if ($word == $inputFind) {
-                array_push($output, $inputReplace);
-              }
-              else {
-                array_push($output, $word);
-              }
-            }
-            return $output = implode(" ", $output);
+            // $array_of_words = explode(" ", $input_string);
+            $output = str_replace($inputFind, $inputReplace, $input_string);
+            return $output;
     }
   }
 ?>

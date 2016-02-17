@@ -36,11 +36,25 @@
 
             //Assert tells our tests what to expect from the output of our method.
             $this->assertEquals("Hello Universe it's a great Universe", $result);
+        }
+
+        function test_replace_partial_match()  //we declare a method to run our first test.
+        {
+            $test_findReplace = new FindReplace;
+            $inputPhrase = "Cathedral";
+            $inputWordFind = "Cat";
+            $inputReplaceWord = "Dog";
+
+
+            //Act: runs the actual method that we are testing.
+            $result = $test_findReplace->find_and_replace($inputPhrase, $inputWordFind, $inputReplaceWord);
+
+
+            //Assert tells our tests what to expect from the output of our method.
+            $this->assertEquals("Doghedral", $result);
         }  // we will
     }
 
-    // Run in terminal in project folder
-    // export PATH=$PATH:./vendor/bin
-    // phpunit tests
+
 
 ?>
